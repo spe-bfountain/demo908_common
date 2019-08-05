@@ -15,14 +15,23 @@ cd proj1 ;
 git subtree pull --prefix dry dry master --squash ;# be sure to only do pulling and pushing from OUTSIDE the common area
 
 ### Making changes, staging, committing
-cd dry ;# be sure to only do this committing from INSIDE the common area
-touch new4common ; git add new4common ; git commit -m "new file from project to common" new4common
+_be sure to only do this committing from INSIDE the common subtree dir_
+
+cd dry ;
+touch new4common ; 
+git add new4common ; 
+git commit -m "add new file to common code, from a project" new4common
+
+vim hap.py ;
+git add hap.py ;
+git commit -m "edit the commonly-referenced hap.py file, from a project" hap.py
 
 ### Pushing after making changes
+_be sure to only do pulling and pushing from OUTSIDE the common subtree dir_
 cd .. ;
-git push origin master ;# be sure to only do pulling and pushing from OUTSIDE the common area
+git push origin master ;
 git subtree push --prefix dry dry master ;
 
 
-:b
+### :b
 

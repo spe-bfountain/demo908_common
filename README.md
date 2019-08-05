@@ -28,6 +28,7 @@ git commit -m "edit the commonly-referenced hap.py file, from a project" hap.py
 
 ### Pushing after making changes
 _be sure to only do pulling and pushing from OUTSIDE the common subtree dir_
+
 cd .. ;
 git push origin master ;
 git subtree push --prefix dry dry master ;
